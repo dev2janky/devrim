@@ -13,9 +13,14 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'https://devrim-production-efc8.up.railway.app',
         changeOrigin: true,
       },
     },
+  },
+  preview: {
+    port: 3000,
+    host: true,
+    allowedHosts: ['mellow-energy-production.up.railway.app'],
   },
 })
