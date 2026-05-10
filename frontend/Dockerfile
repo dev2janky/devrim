@@ -7,6 +7,8 @@ RUN npm install
 
 COPY . .
 
+RUN npx vite build
+
 EXPOSE 3000
 
-CMD ["npm", "run", "dev", "--", "--host"]
+CMD ["npx", "vite", "preview", "--host", "--port", "3000"]
