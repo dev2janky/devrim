@@ -32,7 +32,7 @@ class Settings(BaseSettings):
     MAX_DAILY_OUTREACH: int = 20
     
     # CORS
-    CORS_ORIGINS: list = ["http://localhost:3000", "http://localhost:5173"]
+    CORS_ORIGINS: list = ["*"]
     
     class Config:
         env_file = ".env"
